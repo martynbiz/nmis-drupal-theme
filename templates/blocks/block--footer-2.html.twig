@@ -1,0 +1,83 @@
+{#
+/**
+ * @file
+ * Theme override for a menu block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: HTML attributes for the containing element.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * Headings should be used on navigation menus that consistently appear on
+ * multiple pages. When this menu block's label is configured to not be
+ * displayed, it is automatically made invisible using the 'visually-hidden' CSS
+ * class, which still keeps it visible for screen-readers and assistive
+ * technology. Headings allow screen-reader and keyboard only users to navigate
+ * to or skip the links.
+ * See http://juicystudio.com/article/screen-readers-display-none.php and
+ * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
+ */
+#}
+<footer class="page-footer container-flex page-footer-general d-flex">
+	<section class="footer-container mx-auto">
+		<div class="container footer-inner">
+			<div class="row">
+				<div class="col-md-4 mx-auto">
+					<div>
+						<img src="{{ site_logo }}" alt="{{ 'National Manufacturing Institute Scotland'|t }}" class="nmis-logo-head"/>
+					</div>
+				</div>
+				<hr class="w-100 clearfix d-md-none">
+				<hr class="w-100 clearfix d-md-none">
+				<div class="col-md-4 mx-auto">
+					<h4 class="mb-4">Useful links</h4>
+					<ul>
+						<li><a href="/cookie-policy/">Cookie notice</a></li>
+					</ul>
+				</div>
+				<hr class="w-100 clearfix d-md-none">
+				<div class="col-md-4 mx-auto">
+					<h4 class="mb-4">Contact</h4>
+					<ul>
+						<li>
+							<i aria-hidden="true" class="fas fa-home mr-3"></i>
+							<a href="/location/">Our location</a>
+						</li>
+						<li>
+							<i aria-hidden="true" class="fas fa-envelope mr-3"></i>
+							<a href="/get-in-touch/">Get in touch<span class="sr-only">Contact NMIS</span>
+							</a>
+						</li>
+						<li>
+							<i aria-hidden="true" class="fas fa-phone mr-3"></i>
+							<a href="tel:+441415345200">0141 534 5200<span class="sr-only">Call NMIS</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="row d-flex align-items-center">
+				<div class="col-md-7 col-lg-8">
+					<p class="text-center text-md-left">© 2020 Copyright:
+						<strong>
+							National Manufacturing Institute Scotland</strong>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</footer>

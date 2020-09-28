@@ -1,0 +1,20 @@
+global-styling:
+  version: VERSION
+  js:
+    js/global.js: {}
+  css:
+    component:
+      //nmis.is.strath.ac.uk/media/nationalmanufacturinginstitutescotland/webteamonly/css/main.css: {}
+      css/style.css: {}
+bootstrap:
+  js:
+    /libraries/popper.js/dist/umd/popper.min.js: {}
+    /libraries/bootstrap/dist/js/bootstrap.min.js: {}
+bootstrap_cdn:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
+    //stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: {}
+  css:
+    component:
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css: {}
+      //fonts.googleapis.com/css?family=Raleway&display=swap: {}
