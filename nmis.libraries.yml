@@ -18,3 +18,7 @@ bootstrap_cdn:
     component:
       //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css: {}
       //fonts.googleapis.com/css?family=Raleway&display=swap: {}
+events-landing-page:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js: {}
+    //nmis.is.strath.ac.uk/media/nationalmanufacturinginstitutescotland/webteamonly/js/events-list.bundle.js: {}
