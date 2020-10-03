@@ -13,13 +13,13 @@
  * @see template_preprocess_menu_local_tasks()
  */
 #}
-{%
-  set listClasses = []
-%}
 <div class="container py-3 bg-gray-100 my-3 border border-dark fixed-bottom">
-  <div class="row">
-    <div class="col-sm">
-      | {{ primary }}
-    </div>
-  </div>
+  {% if primary %}
+    <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+    <ul class="list-group list-group-horizontal">{{ primary }}</ul>
+  {% endif %}
+  {% if secondary %}
+    <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+    <ul class="list-group list-group-horizontal">{{ secondary }}</ul>
+  {% endif %}
 </div>

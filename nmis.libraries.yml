@@ -5,7 +5,6 @@ global-styling:
   css:
     component:
       //nmis.is.strath.ac.uk/media/nationalmanufacturinginstitutescotland/webteamonly/css/main.css: {}
-      css/style.css: {}
 bootstrap:
   js:
     /libraries/popper.js/dist/umd/popper.min.js: {}

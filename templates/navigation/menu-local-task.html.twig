@@ -14,4 +14,10 @@
  * @see template_preprocess_menu_local_task()
  */
 #}
-{{ link }} |
+{%
+  set classes = [
+    'list-group-item',
+    is_active ? 'is_active' : '',
+  ]
+%}
+<li{{ attributes.addClass(classes) }}>{{ link }}</li>
