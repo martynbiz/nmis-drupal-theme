@@ -1,0 +1,14 @@
+rules:
+  class-name-format:
+    - 2
+    - convention: hyphenatedlowercase
+  empty-line-between-blocks: 0
+    # - include: true
+    # - allow-single-line-rulesets: false
+  property-sort-order: 0
+  no-important: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+  no-qualifying-elements: 0
+    # - allow-element-with-attribute: true
+    # - allow-element-with-class: true

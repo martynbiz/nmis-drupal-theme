@@ -2,7 +2,7 @@ global-styling:
   version: VERSION
   js:
     js/global.js: {}
-    dist/js/like_button.js: {}
+    dist/js/react.js: {}
   css:
     component:
       //nmis.is.strath.ac.uk/media/nationalmanufacturinginstitutescotland/webteamonly/css/main.css: {}
