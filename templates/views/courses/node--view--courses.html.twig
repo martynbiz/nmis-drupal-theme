@@ -70,19 +70,48 @@
  *   in different view modes.
  */
 #}
-{{ content.field_image }}
-<div class="container py-3">
-	<div class="row">
-		<div class="col-sm-8 offset-sm-2">
-			<article{{attributes}}>
+{% macro list_entities(event_type, separator = ',') %}{% set is_first = true %}{% for item in event_type %}{% if item['#title'] %}{% if not is_first %}{{separator}}{% endif %}{{ item['#title']|lower  }}{% set is_first = false %}{% endif %}{% endfor %}{% endmacro %}
 
-				<h1>{{ label }}</h1>
+{% set border_top = '' %}
+{% for item in content.field_event_type %}
+  {% if item['#title'] %}
+    {% if item['#title'] == 'Internal' %}
+      {% set border_top = 'card-border-top-purple' %}
+    {% elseif item['#title'] == 'External' %}
+      {% set border_top = 'card-border-top-blue' %}
+    {% else %}
+      {% set border_top = 'card-border-top-orange' %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
-				<p>{{start_date}}</p>
+<div class="col-sm-3" data-tags="{{ _self.list_entities(content.field_event_type) }}" data-event="">
+	<div class="card card-event {{border_top}} card-with-icon">
+		<div class="card-body">
+			<div class="card-icon-group">
+				{% for item in content.field_event_type %}
+          {% if item['#title'] %}
+            {% if item['#title'] == 'Internal' %}
+              <i class="fas fa-house-user card-icon"></i>
+            {% elseif item['#title'] == 'Webinar' %}
+              <i class="fas fa-laptop card-icon"></i>
+            {% elseif item['#title'] == 'External' %}
+              <i class="fas fa-map-marked-alt card-icon"></i>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+			</div>
+			<h4>{{ label }}</h4>
 
-        {{ content.body }}
+		</div>
+		<div class="card-footer">
+			<p>
+				{{ content.field_date.0 }}
+				<br>{{ content.field_location.0 }}
+			</p>
 
-			</article>
+			<a href="{{ url }}" aria-label="" class="btn btn-primary my-2 p-3">Read event details</a>
+
 		</div>
 	</div>
 </div>
