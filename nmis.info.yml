@@ -16,4 +16,5 @@ regions:
 
 libraries:
   - nmis/bootstrap_cdn
+  - nmis/react_cdn
   - nmis/global-styling

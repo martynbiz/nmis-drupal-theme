@@ -2,6 +2,7 @@ global-styling:
   version: VERSION
   js:
     js/global.js: {}
+    dist/js/like_button.js: {}
   css:
     component:
       //nmis.is.strath.ac.uk/media/nationalmanufacturinginstitutescotland/webteamonly/css/main.css: {}
@@ -17,6 +18,11 @@ bootstrap_cdn:
     component:
       //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css: {}
       //fonts.googleapis.com/css?family=Raleway&display=swap: {}
+react_cdn:
+  js:
+    //unpkg.com/babel-standalone@6/babel.min.js: {}
+    //unpkg.com/react@16/umd/react.development.js: {}
+    //unpkg.com/react-dom@16/umd/react-dom.development.js: {}
 events-landing-page:
   js:
     //cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js: {}
