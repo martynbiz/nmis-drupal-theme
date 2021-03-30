@@ -46,17 +46,16 @@
 
 {{ page.above_header }}
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-  {{ page.header }}
-  
-  {% if page.primary_menu %}
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="CollapsingNavbar">
-      {{ page.primary_menu }}
-    </div>
-  {% endif %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
+	<a href="/" class="navbar-brand"><img src="https://nmis.is.strath.ac.uk/media/nationalmanufacturinginstitutescotland/logos/nmis-main.png" alt="National Manufacturing Institute Scotland"></a>
+	{% if page.primary_menu %}
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="CollapsingNavbar">
+			{{ page.primary_menu }}
+		</div>
+	{% endif %}
 </nav>
 
 {{ page.breadcrumb }}
@@ -68,13 +67,13 @@
 {{ page.content }}
 
 {% if page.sidebar_first %}
-  {{ page.sidebar_first }}
+	{{ page.sidebar_first }}
 {% endif %}
 
 {% if page.sidebar_second %}
-  {{ page.sidebar_second }}
+	{{ page.sidebar_second }}
 {% endif %}
 
 {% if page.footer %}
-  {{ page.footer }}
+	{{ page.footer }}
 {% endif %}
